@@ -68,13 +68,14 @@ extension PeopleViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = peopleTableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as! PeopleTableViewCell
         let cellToSet = people[indexPath.row]
-        cell.nameLabel.text = "Name: \(cellToSet.name)"
+        cell.nameLabel.text = cellToSet.name
         cell.eyeColorLabel.text = "Eye Color: \(cellToSet.eyeColor.capitalized)"
         cell.hairColorLabel.text = "Hair Color: \(cellToSet.hairColor.capitalized)"
         cell.birthYearLabel.text = "Born: \(cellToSet.birthYear)"
         if let date = dateFormatter.date(from: cellToSet.created) {
             cell.createdLabel.text = ("Date Created: \(datePrint.string(from: date))")
         }
+        cell.nameLabel.makeBorder()
         return cell
     }
     

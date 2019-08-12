@@ -70,12 +70,13 @@ extension PlanetsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = planetsTableView.dequeueReusableCell(withIdentifier: "PlanetCell", for: indexPath) as? PlanetsTableViewCell else {return PlanetsTableViewCell()}
         let cellToSet = planets[indexPath.row]
-        cell.planetNameLabel.text = "Name: \(cellToSet.name.capitalized)"
+        cell.planetNameLabel.text = cellToSet.name
         cell.planetClimateLabel.text = "Climate: \(cellToSet.climate.capitalized)"
-        cell.planetPopulationLabel.text = "Population: \(cellToSet.population.capitalized)"
+        cell.planetPopulationLabel.text = "Population: \(cellToSet.population)"
         if let date = dateFormatter.date(from: cellToSet.created) {
             cell.planetCreatedLabel.text = ("Date Created: \(datePrint.string(from: date))")
         }
+        cell.planetNameLabel.makeBorder()
         return cell
     }
     

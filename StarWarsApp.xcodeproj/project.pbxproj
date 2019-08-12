@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090B1717230226C400D490E4 /* CustomUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B1716230226C400D490E4 /* CustomUILabel.swift */; };
 		09729E8C2300B28D009722B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729E8B2300B28D009722B9 /* AppDelegate.swift */; };
 		09729E8E2300B28D009722B9 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729E8D2300B28D009722B9 /* PeopleViewController.swift */; };
 		09729E942300B28D009722B9 /* StarWarsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09729E922300B28D009722B9 /* StarWarsApp.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090B1716230226C400D490E4 /* CustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUILabel.swift; sourceTree = "<group>"; };
 		09729E882300B28D009722B9 /* StarWarsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09729E8B2300B28D009722B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09729E8D2300B28D009722B9 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +78,9 @@
 			children = (
 				09729EA12300B753009722B9 /* Network Services */,
 				09729EA32300B77C009722B9 /* Models */,
-				09729ECD23012976009722B9 /* Storyboard */,
 				09729EA42300B78E009722B9 /* Controllers */,
 				09729EBA23012041009722B9 /* Cells */,
+				09729ECD23012976009722B9 /* Storyboard */,
 				09729ECE23013330009722B9 /* Extensions */,
 				09729EA02300B327009722B9 /* Supporting Files */,
 				09729E9A2300B291009722B9 /* Info.plist */,
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				09729ECF23013354009722B9 /* UIViewController+Alerts.swift */,
+				090B1716230226C400D490E4 /* CustomUILabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				09729EA82300BD0F009722B9 /* PlanetsModel.swift in Sources */,
 				09729EB023011EB4009722B9 /* PlanetsViewController.swift in Sources */,
 				09729EC823012303009722B9 /* PeopleTableViewCell.swift in Sources */,
+				090B1717230226C400D490E4 /* CustomUILabel.swift in Sources */,
 				09729ED023013354009722B9 /* UIViewController+Alerts.swift in Sources */,
 				09729EAC2300BE3B009722B9 /* PlanetAPIClient.swift in Sources */,
 				09729EA62300B909009722B9 /* PeopleModel.swift in Sources */,
