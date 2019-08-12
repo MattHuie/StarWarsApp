@@ -39,14 +39,18 @@ extension PeopleViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = peopleTableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath)
-        let peopleToSet = people[indexPath.row]
-        cell.textLabel?.text = peopleToSet.name
+        let cell = peopleTableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as! PeopleTableViewCell
+        let cellToSet = people[indexPath.row]
+        cell.nameLabel.text = cellToSet.name
+        cell.birthYearLabel.text = "Born: \(cellToSet.birthYear)"
+        cell.eyeColorLabel.text = "Eye Color: \(cellToSet.eyeColor)"
+        cell.hairColorLabel.text = "Hair Color: \(cellToSet.hairColor)"
+        cell.createdLabel.text = cellToSet.created
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 500
     }
     
 }
