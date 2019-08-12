@@ -1,13 +1,13 @@
-
 import UIKit
 
-class ViewController: UIViewController {
+class PlanetsViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
-    
-}
 
+   
+
+}

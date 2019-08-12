@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SL0-Dp-LDf">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planets-->
+        <scene sceneID="KfQ-LI-F8l">
+            <objects>
+                <viewController id="s7z-fN-tJZ" customClass="PlanetsViewController" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lbb-EV-PHn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ySm-Zz-E3S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Planets" id="VU9-7x-3ae"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwf-uy-NaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="321"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="3Oc-b8-tsj">
+            <objects>
+                <viewController id="FsJ-Au-Ry0" customClass="PeopleViewController" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mkf-qG-psY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gP-tu-dQi">
+                                <rect key="frame" x="20" y="44" width="374" height="584"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" textLabel="we9-CB-qkz" rowHeight="102" style="IBUITableViewCellStyleDefault" id="Ee4-mF-JBe" customClass="PeopleTableViewCell" customModule="StarWarsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ee4-mF-JBe" id="iia-Ya-yjb" customClass="PeopleTableViewCell" customModule="StarWarsApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="101.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="we9-CB-qkz">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="101.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4gP-tu-dQi" firstAttribute="top" secondItem="BBl-hQ-XXW" secondAttribute="top" id="2Wb-sa-ELO"/>
+                            <constraint firstItem="BBl-hQ-XXW" firstAttribute="trailing" secondItem="4gP-tu-dQi" secondAttribute="trailing" constant="20" id="4Xe-0A-WtL"/>
+                            <constraint firstItem="BBl-hQ-XXW" firstAttribute="bottom" secondItem="4gP-tu-dQi" secondAttribute="bottom" constant="185" id="4bE-f7-TbQ"/>
+                            <constraint firstItem="4gP-tu-dQi" firstAttribute="leading" secondItem="BBl-hQ-XXW" secondAttribute="leading" constant="20" id="THC-bP-9ta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BBl-hQ-XXW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="People" id="b42-Px-KDJ"/>
+                    <connections>
+                        <outlet property="peopleTableView" destination="4gP-tu-dQi" id="DyS-2Y-fYx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xx-S9-fRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.4202898550725" y="-328.125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OWj-C8-jEQ">
+            <objects>
+                <tabBarController id="SL0-Dp-LDf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0t2-sO-GBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FsJ-Au-Ry0" kind="relationship" relationship="viewControllers" id="5CL-vo-yR2"/>
+                        <segue destination="s7z-fN-tJZ" kind="relationship" relationship="viewControllers" id="DHS-pG-iQA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9h-Bf-aVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-560" y="-4"/>
+        </scene>
+    </scenes>
+</document>

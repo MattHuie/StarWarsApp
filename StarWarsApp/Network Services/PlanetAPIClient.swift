@@ -1,7 +1,7 @@
 import Foundation
 
 class PlanetAPIClient {
-    public func searchPlanet(onCompletion: @escaping (Result<[PlanetInfo], NewtworkError>) -> Void) {
+    public func getPlanets(onCompletion: @escaping (Result<[PlanetInfo], NewtworkError>) -> Void) {
         let endpoint = "https://swapi.co/api/planets"
         guard let url = URL(string: endpoint) else {
             onCompletion(.failure(.badURL))

@@ -1,7 +1,7 @@
 import Foundation
 
 class PeopleAPIClient {
-    public func searchPeople(onCompletion: @escaping (Result<[PeopleInfo], NewtworkError>) -> Void) {
+    public func getPeople(onCompletion: @escaping (Result<[PeopleInfo], NewtworkError>) -> Void) {
         let endpoint = "https://swapi.co/api/people"
         guard let url = URL(string: endpoint) else {
             onCompletion(.failure(.badURL))
