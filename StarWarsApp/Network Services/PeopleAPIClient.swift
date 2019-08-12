@@ -1,8 +1,8 @@
 import Foundation
 
 class PeopleAPIClient {
-    public func getPeople(onCompletion: @escaping (Result<[PeopleInfo], NewtworkError>) -> Void) {
-        let endpoint = "https://swapi.co/api/people"
+    public func getPeople(page: Int, onCompletion: @escaping (Result<PeopleContainer, NewtworkError>) -> Void) {
+        let endpoint = "https://swapi.co/api/people/?page=\(page)"
         guard let url = URL(string: endpoint) else {
             onCompletion(.failure(.badURL))
             return
@@ -14,7 +14,7 @@ class PeopleAPIClient {
             } else if let data = data {
                 do {
                     let people = try JSONDecoder().decode(PeopleContainer.self, from: data)
-                    onCompletion(.success(people.results))
+                    onCompletion(.success(people))
                 }
                 catch {
                     onCompletion(.failure(.jsonDecodingError(error)))

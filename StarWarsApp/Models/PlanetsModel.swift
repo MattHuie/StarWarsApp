@@ -1,7 +1,7 @@
 import Foundation
 
 struct PlanetsContainer: Codable {
-    let result: [PlanetInfo]
+    let results: [PlanetInfo]
 }
 
 struct PlanetInfo: Codable {
