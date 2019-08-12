@@ -13,6 +13,11 @@
 		09729E942300B28D009722B9 /* StarWarsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09729E922300B28D009722B9 /* StarWarsApp.xcdatamodeld */; };
 		09729E962300B291009722B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09729E952300B291009722B9 /* Assets.xcassets */; };
 		09729E992300B291009722B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09729E972300B291009722B9 /* LaunchScreen.storyboard */; };
+		09729EA62300B909009722B9 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729EA52300B909009722B9 /* PeopleModel.swift */; };
+		09729EA82300BD0F009722B9 /* PlanetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729EA72300BD0F009722B9 /* PlanetsModel.swift */; };
+		09729EAA2300BE26009722B9 /* PeopleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729EA92300BE26009722B9 /* PeopleAPIClient.swift */; };
+		09729EAC2300BE3B009722B9 /* PlanetAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729EAB2300BE3B009722B9 /* PlanetAPIClient.swift */; };
+		09729EAE2300BEAC009722B9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729EAD2300BEAC009722B9 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		09729E952300B291009722B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09729E982300B291009722B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09729E9A2300B291009722B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09729EA52300B909009722B9 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
+		09729EA72300BD0F009722B9 /* PlanetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsModel.swift; sourceTree = "<group>"; };
+		09729EA92300BE26009722B9 /* PeopleAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIClient.swift; sourceTree = "<group>"; };
+		09729EAB2300BE3B009722B9 /* PlanetAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetAPIClient.swift; sourceTree = "<group>"; };
+		09729EAD2300BEAC009722B9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,9 @@
 		09729E8A2300B28D009722B9 /* StarWarsApp */ = {
 			isa = PBXGroup;
 			children = (
-				09729E8D2300B28D009722B9 /* ViewController.swift */,
+				09729EA12300B753009722B9 /* Network Services */,
+				09729EA32300B77C009722B9 /* Models */,
+				09729EA42300B78E009722B9 /* Controllers */,
 				09729E8F2300B28D009722B9 /* Main.storyboard */,
 				09729EA02300B327009722B9 /* Supporting Files */,
 				09729E9A2300B291009722B9 /* Info.plist */,
@@ -73,6 +85,33 @@
 				09729E972300B291009722B9 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09729EA12300B753009722B9 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				09729EAD2300BEAC009722B9 /* NetworkError.swift */,
+				09729EA92300BE26009722B9 /* PeopleAPIClient.swift */,
+				09729EAB2300BE3B009722B9 /* PlanetAPIClient.swift */,
+			);
+			path = "Network Services";
+			sourceTree = "<group>";
+		};
+		09729EA32300B77C009722B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09729EA52300B909009722B9 /* PeopleModel.swift */,
+				09729EA72300BD0F009722B9 /* PlanetsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09729EA42300B78E009722B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				09729E8D2300B28D009722B9 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09729EAA2300BE26009722B9 /* PeopleAPIClient.swift in Sources */,
+				09729EAE2300BEAC009722B9 /* NetworkError.swift in Sources */,
 				09729E942300B28D009722B9 /* StarWarsApp.xcdatamodeld in Sources */,
 				09729E8E2300B28D009722B9 /* ViewController.swift in Sources */,
+				09729EA82300BD0F009722B9 /* PlanetsModel.swift in Sources */,
+				09729EAC2300BE3B009722B9 /* PlanetAPIClient.swift in Sources */,
+				09729EA62300B909009722B9 /* PeopleModel.swift in Sources */,
 				09729E8C2300B28D009722B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
