@@ -54,10 +54,7 @@ class PlanetsViewController: UIViewController {
         planetsTableView.performBatchUpdates({
             planetsTableView.insertRows(at: indexPaths, with: .automatic)
         }, completion: nil)
-        
     }
- 
-
 }
 extension PlanetsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -7,7 +7,6 @@ class PlanetsTableViewCell: UITableViewCell {
     @IBOutlet weak var planetPopulationLabel: UILabel!
     @IBOutlet weak var planetCreatedLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

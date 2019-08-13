@@ -8,7 +8,6 @@ class PeopleTableViewCell: UITableViewCell {
     @IBOutlet weak var birthYearLabel: UILabel!
     @IBOutlet weak var createdLabel: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }

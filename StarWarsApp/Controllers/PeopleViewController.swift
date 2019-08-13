@@ -81,8 +81,6 @@ class PeopleViewController: UIViewController {
             musicButton.image = UIImage(named: "pauseButton")
         }
     }
-    
-    
 }
 
 extension PeopleViewController: UITableViewDataSource, UITableViewDelegate {
@@ -90,12 +88,13 @@ extension PeopleViewController: UITableViewDataSource, UITableViewDelegate {
         return people.count
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
         if indexPath.row == people.count - 1 {
             pageNumber += 1
             loadPeopleData(pageNumber: pageNumber)
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = peopleTableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as! PeopleTableViewCell
         let cellToSet = people[indexPath.row]
