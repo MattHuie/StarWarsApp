@@ -1,5 +1,6 @@
 import Foundation
 
+// This class is to get the data from the API, using result type which helps to validate a .success or .failure against the call
 class PlanetAPIClient {
     public func getPlanets(page: Int, onCompletion: @escaping (Result<PlanetsContainer, NewtworkError>) -> Void) {
         let endpoint = "https://swapi.co/api/planets/?page=\(page)"

@@ -1,8 +1,10 @@
 import UIKit
+import AVFoundation
 
 class PeopleViewController: UIViewController {
 
     @IBOutlet weak var peopleTableView: UITableView!
+    @IBOutlet weak var musicButton: UIBarButtonItem!
     
     private var people = [PeopleInfo]() {
         didSet {
@@ -13,9 +15,10 @@ class PeopleViewController: UIViewController {
     }
     
     private let peopleAPI = PeopleAPIClient()
-    var pageNumber = 1
+    var player: AVAudioPlayer?
     let dateFormatter = DateFormatter()
     let datePrint = DateFormatter()
+    var pageNumber = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +27,10 @@ class PeopleViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
         datePrint.dateFormat = "dd-MM-yyyy (HH:mm:ss)"
         loadPeopleData(pageNumber: pageNumber)
+        playSound()
     }
     
+    // Gets the data of people from API
     func loadPeopleData(pageNumber: Int) {
         peopleAPI.getPeople(page: pageNumber) { [weak self] result in
             switch result {
@@ -39,6 +44,7 @@ class PeopleViewController: UIViewController {
         }
     }
     
+    // Updates the tableview with more data when it reaches the end - via inserting them on the bottom
     private func updateWithNewContent(morePeople: [PeopleInfo]) {
         let offset = self.people.count
         self.people += morePeople
@@ -51,6 +57,31 @@ class PeopleViewController: UIViewController {
         }, completion: nil)
         
     }
+   
+    // To play the Star Wars theme throughout the app
+    public func playSound() {
+        guard let url = Bundle.main.url(forResource: "StarWarsTheme", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+            player.play()
+        } catch let error {
+            self.showAlert(title: "Error", message: error.localizedDescription)
+        }
+    }
+    
+    @IBAction func controlMusic(_ sender: UIBarButtonItem) {
+        if musicButton.image == UIImage(named: "pauseButton") {
+            player?.pause()
+            musicButton.image = UIImage(named: "playButton")
+        } else if musicButton.image == UIImage(named: "playButton") {
+            player?.play()
+            musicButton.image = UIImage(named: "pauseButton")
+        }
+    }
+    
     
 }
 

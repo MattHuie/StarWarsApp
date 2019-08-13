@@ -10,6 +10,7 @@ struct PeopleInfo: Codable {
     let eyeColor: String
     let birthYear: String
     let created: String
+    // Added coding keys to help reduce coding errors
     enum CodingKeys: String, CodingKey {
         case name
         case hairColor = "hair_color"

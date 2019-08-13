@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		090B1717230226C400D490E4 /* CustomUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B1716230226C400D490E4 /* CustomUILabel.swift */; };
+		090B171B230229FB00D490E4 /* StarWarsTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 090B171A230229FB00D490E4 /* StarWarsTheme.mp3 */; };
 		09729E8C2300B28D009722B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729E8B2300B28D009722B9 /* AppDelegate.swift */; };
 		09729E8E2300B28D009722B9 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09729E8D2300B28D009722B9 /* PeopleViewController.swift */; };
 		09729E942300B28D009722B9 /* StarWarsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09729E922300B28D009722B9 /* StarWarsApp.xcdatamodeld */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		090B1716230226C400D490E4 /* CustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUILabel.swift; sourceTree = "<group>"; };
+		090B171A230229FB00D490E4 /* StarWarsTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StarWarsTheme.mp3; sourceTree = "<group>"; };
 		09729E882300B28D009722B9 /* StarWarsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09729E8B2300B28D009722B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09729E8D2300B28D009722B9 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090B171C23022B4A00D490E4 /* Music Files */ = {
+			isa = PBXGroup;
+			children = (
+				090B171A230229FB00D490E4 /* StarWarsTheme.mp3 */,
+			);
+			path = "Music Files";
+			sourceTree = "<group>";
+		};
 		09729E7F2300B28D009722B9 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 			children = (
 				09729E8B2300B28D009722B9 /* AppDelegate.swift */,
 				09729E952300B291009722B9 /* Assets.xcassets */,
+				090B171C23022B4A00D490E4 /* Music Files */,
 				09729E972300B291009722B9 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09729ECC23012796009722B9 /* Main.storyboard in Resources */,
+				090B171B230229FB00D490E4 /* StarWarsTheme.mp3 in Resources */,
 				09729E992300B291009722B9 /* LaunchScreen.storyboard in Resources */,
 				09729E962300B291009722B9 /* Assets.xcassets in Resources */,
 			);

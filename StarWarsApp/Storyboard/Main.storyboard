@@ -97,7 +97,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ySm-Zz-E3S"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Planets" image="icons8-planet-40" id="VU9-7x-3ae"/>
+                    <tabBarItem key="tabBarItem" title="Planets" image="planetIcon" id="VU9-7x-3ae"/>
                     <connections>
                         <outlet property="planetsTableView" destination="nfO-zr-0Y9" id="tVa-u8-UPB"/>
                     </connections>
@@ -187,7 +187,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWx-Zf-Clp">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="People" id="d8f-ND-HDl"/>
+                                    <navigationItem title="People" id="d8f-ND-HDl">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pauseButton" id="jaZ-su-OxP">
+                                            <connections>
+                                                <action selector="controlMusic:" destination="FsJ-Au-Ry0" id="8LD-xb-iMf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -203,8 +209,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BBl-hQ-XXW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" image="icons8-star-wars-50" id="b42-Px-KDJ"/>
+                    <tabBarItem key="tabBarItem" title="People" image="peopleIcon" id="b42-Px-KDJ"/>
                     <connections>
+                        <outlet property="musicButton" destination="jaZ-su-OxP" id="W6t-mc-wN1"/>
                         <outlet property="peopleTableView" destination="4gP-tu-dQi" id="DyS-2Y-fYx"/>
                     </connections>
                 </viewController>
@@ -232,7 +239,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-planet-40" width="40" height="40"/>
-        <image name="icons8-star-wars-50" width="50" height="50"/>
+        <image name="pauseButton" width="48" height="48"/>
+        <image name="peopleIcon" width="50" height="50"/>
+        <image name="planetIcon" width="40" height="40"/>
     </resources>
 </document>

@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class PlanetsViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class PlanetsViewController: UIViewController {
     }
     
     var pageNumber = 1
+    var player: AVAudioPlayer?
     let dateFormatter = DateFormatter()
     let datePrint = DateFormatter()
     
@@ -27,6 +29,7 @@ class PlanetsViewController: UIViewController {
 
     }
     
+    // Gets the planets data from thr API
     private func loadPlanetsData(pageNumber: Int) {
         planetAPI.getPlanets(page: pageNumber) { [weak self] result in
             switch result {
@@ -40,6 +43,7 @@ class PlanetsViewController: UIViewController {
         }
     }
     
+    // Updates the tableview with more data when it reaches the end - via inserting them on the bottom
     private func updateWithNewContent(morePlanets: [PlanetInfo]) {
         let offset = self.planets.count
         self.planets += morePlanets
@@ -52,7 +56,8 @@ class PlanetsViewController: UIViewController {
         }, completion: nil)
         
     }
-    
+ 
+
 }
 extension PlanetsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

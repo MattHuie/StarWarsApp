@@ -1,5 +1,6 @@
 import Foundation
 
+// This class is to get the data from the API, using result type which helps to validate a .success or .failure against the call
 class PeopleAPIClient {
     public func getPeople(page: Int, onCompletion: @escaping (Result<PeopleContainer, NewtworkError>) -> Void) {
         let endpoint = "https://swapi.co/api/people/?page=\(page)"
